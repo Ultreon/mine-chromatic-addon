@@ -29,7 +29,7 @@ allprojects {
     apply plugin: "maven-publish"
 
     archivesBaseName = archives_base_name
-    version = mod_version + "+mcef." + mcef_version
+    version = mod_version
     group = maven_group
 
     repositories {
