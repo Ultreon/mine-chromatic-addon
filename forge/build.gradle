@@ -21,7 +21,7 @@ configurations {
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:$forge_version"
+    forge "net.minecraftforge:forge:$minecraft_version-$forge_version"
     // Remove the next line if you don't want to depend on the API
     modApi "dev.architectury:architectury-forge:$architectury_version"
 
@@ -30,8 +30,8 @@ dependencies {
 
     modApi "com.github.Ultreon.devices-mod:devices-forge:$devices_mod_version"
 
-    modCompileOnly 'com.cinemamod:mcef:2.1.4-1.20.1'
-    modRuntimeOnly 'com.cinemamod:mcef-forge:2.1.4-1.20.1', {
+    modCompileOnly "com.cinemamod:mcef:$mcef_version-$minecraft_version"
+    modRuntimeOnly "com.cinemamod:mcef-forge:$mcef_version-$minecraft_version", {
         exclude group: "net.neoforged"
     }
 }
