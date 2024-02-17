@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "mine_chromatic",
+  "version": "${version}",
+
+  "name": "Mine Chromatic Addon",
+  "description": "Adds an actually working webbrowser to Ultreon Devices Mod.",
+  "authors": [
+    "Ultreon Team",
+    "XyperCode"
+  ],
+  "contact": {
+    "website": "https://ultreon.github.io/?id=mine_chromatic#project",
+    "repo": "https://github.com/Ultreon/mine-chromatic-addon",
+    "issues": "https://github.com/Ultreon/mine-chromatic-addon/issues",
+    "sources": "https://github.com/Ultreon/mine-chromatic-addon"
+  },
+
+  "license": "GNU LGPL 3.0",
+  "icon": "assets/mine_chromatic/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.ultreon.minechromatic.fabric.MineChromaticAddonFabric"
+    ],
+    "devices:application_registration": [
+      "io.github.ultreon.minechromatic.fabric.MineChromaticAppRegistration"
+    ]
+  },
+  "mixins": [
+    "mine_chromatic.mixins.json",
+    "mine_chromatic-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.7",
+    "minecraft": ">=1.20.1",
+    "mcef": ">=2.1",
+    "devices": ">=0.8.2"
+  }
+}
